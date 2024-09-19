@@ -55,7 +55,7 @@ ifeq ($(ENABLE_FIPS), 1)
 	BUILD_TOOL_CGO_ENABLED := 1
 endif
 
-RELEASE_VERSION ?= $(shell git describe --tags --dirty --always)
+RELEASE_VERSION ?= v8.4.0-alpha-39-$(shell git describe --tags --dirty --always)
 ifeq ($(RUN_CI), 1)
 	RELEASE_VERSION := None
 endif
